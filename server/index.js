@@ -41,9 +41,13 @@ app.post("/login", (req, res) =>{
             if(err){
                 res.send({err: err})
             } 
-                if(result.lenght > 0){
+            
+                if(result.lengt > 0){
                     res.send(result)
                 }else{
+                    console.log(result)
+                    console.log(name)
+                    console.log(password)
                     res.send({message : "Wrong username/password combination"});
                 }
         }
