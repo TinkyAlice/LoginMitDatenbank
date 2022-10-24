@@ -6,7 +6,7 @@ const { response } = require('express');
 
 const bcrypt = require('bcrypt')
 const saltRounds = 10
-/*
+
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
@@ -18,7 +18,7 @@ app.use(cors({
     methods: ["GET", "POST"],
     credentials: true
 }));
-
+/*
 app.use(cookieParser)
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -69,7 +69,7 @@ app.post("/register", (req, res) => {
 app.post("/login", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
-console.log("moin")
+    console.log("moin")
     db.query(
         "SELECT * FROM users WHERE username = ?;",
         username,
